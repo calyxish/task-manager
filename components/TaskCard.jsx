@@ -15,10 +15,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 25,
     marginBottom: 15,
-    height: 120, // Tall enough to match the Figma design
-    justifyContent: 'center', // Centers the text vertically
+    height: 120, 
+    justifyContent: 'center', 
     borderWidth: 1,
-    borderColor: '#E8DED1', // Light border matching the design
+    borderColor: '#E8DED1', 
   },
   title: {
     fontSize: 16,

@@ -5,7 +5,6 @@ import { Feather, Ionicons } from '@expo/vector-icons';
 export default function SearchBar() {
   return (
     <View style={styles.container}>
-      {/* Search Input Area */}
       <View style={styles.inputContainer}>
         <Feather name="search" size={20} color="#000" style={styles.searchIcon} />
         <TextInput 
@@ -15,7 +14,6 @@ export default function SearchBar() {
         />
       </View>
 
-      {/* Filter Button */}
       <TouchableOpacity style={styles.filterButton}>
         <Ionicons name="options-outline" size={24} color="white" />
       </TouchableOpacity>
@@ -50,8 +48,7 @@ const styles = StyleSheet.create({
   filterButton: {
     width: 50,
     height: 50,
-    backgroundColor: '#F0522F', // The orange color from Figma
-    borderRadius: 14,
+    backgroundColor: '#F0522F', 
     justifyContent: 'center',
     alignItems: 'center',
   },

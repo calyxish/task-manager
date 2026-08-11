@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 15,
     marginRight: 15,
-    width: 180, // Fixed width so they scroll nicely
+    width: 180, 
     height: 230,
   },
   title: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 130, // Adjust this based on your actual Figma exports
+    height: 130, 
     alignSelf: 'center',
   },
 });

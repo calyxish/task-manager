@@ -1,14 +1,13 @@
 import React from 'react';
 import { StyleSheet, View, Text, ScrollView, FlatList } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context'; // Updated import
+import { SafeAreaView } from 'react-native-safe-area-context'; 
 
-// 1. Import your custom components
+
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
-import CategoryCard from './components/CategoryCard'; // Fixed typo here
+import CategoryCard from './components/CategoryCard';
 import TaskCard from './components/TaskCard';
 
-// 2. Setup your mock data (We can move this to data/mockData.js later!)
 const categoriesData = [
   { 
     id: '1', 
@@ -66,25 +65,22 @@ const tasksData = [
   { id: '8', title: 'Learn To Drive' },
 
 
-  // You will add your 5 new custom tasks here later!
 ];
 
 export default function App() {
   return (
     <SafeAreaView style={styles.safeArea}>
-      {/* 3. The main vertical scroll wrapper for the entire screen */}
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
           
           <Header />
           <SearchBar />
 
-          {/* 4. Categories Section (Horizontal Scroll) */}
           <Text style={styles.sectionTitle}>Categories</Text>
           <FlatList
             data={categoriesData}
             keyExtractor={(item) => item.id}
-            horizontal // Makes it scroll left-to-right
+            horizontal 
             showsHorizontalScrollIndicator={false}
             renderItem={({ item }) => (
               <CategoryCard
@@ -96,10 +92,8 @@ export default function App() {
             style={styles.categoriesList}
           />
 
-          {/* 5. Ongoing Tasks Section (Vertical List) */}
           <Text style={styles.sectionTitle}>Ongoing Task</Text>
           <View style={styles.tasksContainer}>
-            {/* We use .map here instead of a FlatList to avoid nesting scrolling lists */}
             {tasksData.map((task) => (
               <TaskCard key={task.id} title={task.title} />
             ))}
@@ -114,13 +108,13 @@ export default function App() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#F7F0E8', // This is the off-white background color from the Figma design
+    backgroundColor: '#F7F0E8', 
   },
   container: {
     flex: 1,
   },
   content: {
-    paddingHorizontal: 20, // Adds breathing room on the left and right edges
+    paddingHorizontal: 20,
     paddingTop: 10,
   },
   sectionTitle: {
@@ -130,9 +124,9 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   categoriesList: {
-    marginBottom: 30, // Pushes the Ongoing Tasks section down
+    marginBottom: 30, 
   },
   tasksContainer: {
-    paddingBottom: 40, // Ensures you can scroll past the very last task
+    paddingBottom: 40, 
   },
 });
